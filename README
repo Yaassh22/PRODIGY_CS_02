@@ -1,0 +1,22 @@
+Image Encryption and Decryption with Fernet
+This Python program demonstrates how to encrypt and decrypt image files using the Fernet symmetric encryption algorithm from the cryptography library. It provides a simple and secure way to protect image files by converting them into an encrypted format that can only be decrypted with the correct key.
+
+Features
+Encrypt Images: Encrypt image files from a specified folder using a generated encryption key.
+Decrypt Images: Decrypt encrypted image files back to their original form using the same key.
+Key Management: The encryption key is stored in a file (key.pem) which is required for both encryption and decryption processes.
+Folder Organization: The program supports automatic handling of input and output folders (Images, encImages, decImages) for the original, encrypted, and decrypted images, respectively.
+How It Works
+Encryption:
+
+The program takes images from the ./Images/ folder and encrypts them using the Fernet key.
+Encrypted images are saved in the ./encImages/ folder.
+The encryption key is saved in a key.pem file for future decryption.
+Decryption:
+
+The program reads encrypted images from the ./encImages/ folder and decrypts them using the key stored in key.pem.
+Decrypted images are saved in the ./decImages/ folder.
+Key Management:
+
+The key.pem file contains the secret key used for both encrypting and decrypting the images.
+Important: The same key is needed to decrypt the files that were used to encrypt them.
